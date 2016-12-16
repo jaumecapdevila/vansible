@@ -3,8 +3,9 @@
 - name: MySql packages are installed
   yum: pkg={{ item }}
   with_items:
-    - mysql-server
-    - mysql
+    - mariadb
+    - mariadb-server
+    - MySQL-python
 
 - name: Start the MySQL service
-  service: name=mysqld state=started enabled=true
+  service: name=mariadb state=started enabled=true

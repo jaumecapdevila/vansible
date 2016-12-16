@@ -2,4 +2,4 @@
 
 - include: install.yml
 - include: configure.yml
-- include: secure.yml
+#- include: secure.yml

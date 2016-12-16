@@ -6,10 +6,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
   config.vm.hostname = "devBox"
 
-  config.ssh.insert_key = false
-  config.ssh.private_key_path = ["~/.ssh/jaume_dev.pem", "~/.vagrant.d/insecure_private_key"]
-
-  config.vm.network :forwarded_port, host: 8080, guest: 80, auto_correct: true # website
+  config.vm.network :forwarded_port, host: 8080, guest: 8080, auto_correct: true # website
   config.vm.network :forwarded_port, host: 2443, guest: 443, auto_correct: true # ssl
   config.vm.network :forwarded_port, guest: 3306, host: 3306, auto_correct: true # mysql
   config.vm.network :forwarded_port, guest: 9000, host: 9000, auto_correct: true # phpmyadmin
@@ -25,7 +22,6 @@ Vagrant.configure(2) do |config|
     vb.cpus   = 2
 
   end
-config.vm.provision "file", source: "~/.ssh/jaume_dev.pub", destination: "~/.ssh/authorized_keys"
 
  config.vm.provision "ansible" do |ansible|
     ansible.playbook = "provision/vagrant.yml"

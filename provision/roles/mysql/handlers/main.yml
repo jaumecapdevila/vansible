@@ -2,4 +2,4 @@
 ---
 
 - name: Restart the MySQL service
-  service: name=mysqld state=restarted enabled=true
+  service: name=mariadb state=restarted enabled=true

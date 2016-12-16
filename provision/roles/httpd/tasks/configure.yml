@@ -9,10 +9,5 @@
 - name: Disable EnableSendFile
   lineinfile: dest=/etc/httpd/conf/httpd.conf line="EnableSendFile off"
 
-- name: SELinux to enforcing
-  command: /sbin/setenforce 0
-  notify:
-    - restart httpd
-
 - name: Ensure Apache running
   service: name=httpd state=started enabled=yes
