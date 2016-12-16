@@ -1,0 +1,9 @@
+# file: roles/mysql/defaults/main.yml
+---
+
+ mysql_root_password: devdb
+
+ mysql_users:
+      - name: root
+        pass: devdb
+        priv: "*.*:ALL,GRANT"

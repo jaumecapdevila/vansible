@@ -1,0 +1,6 @@
+- hosts: all
+    roles:
+        - setup
+        - httpd
+        - php70
+        - mysql

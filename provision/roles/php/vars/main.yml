@@ -1,0 +1,5 @@
+# file: roles/php70/defaults/main.yml
+---
+
+composer_path: /usr/local/bin/composer
+php_version: "70"
