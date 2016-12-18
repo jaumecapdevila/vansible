@@ -21,4 +21,8 @@
      - vim
      - man
      - unzip
-     
+     - libselinux-python
+
+  # Disable SELinux
+- selinux:
+    state: disabled
