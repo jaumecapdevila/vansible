@@ -16,12 +16,15 @@
      - nano
      - curl
      - gcc
+     - make
      - kernel-devel
      - wget
      - vim
+     - perl
      - man
      - unzip
      - libselinux-python
+     - net-tools
 
   # Disable SELinux
 - selinux:

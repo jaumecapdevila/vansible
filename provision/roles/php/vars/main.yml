@@ -2,4 +2,4 @@
 ---
 
 composer_path: /usr/local/bin/composer
-php_version: "70"
+php_version: "71"
