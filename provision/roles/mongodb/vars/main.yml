@@ -1,0 +1,4 @@
+# file: roles/mongodb/defaults/main.yml
+---
+
+mongodb_version: "3.0"
