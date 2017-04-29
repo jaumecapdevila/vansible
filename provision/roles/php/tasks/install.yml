@@ -28,5 +28,6 @@
     - php-mysql
     - php-gd
     - php-apcu
+    - php-memcached
   notify:
     - restart httpd

@@ -7,4 +7,5 @@
     - php
     - mysql
     - mongodb
+    - memcached
 ...
