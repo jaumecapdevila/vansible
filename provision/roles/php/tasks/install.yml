@@ -29,5 +29,6 @@
     - php-gd
     - php-apcu
     - php-memcached
+    - php-curl
   notify:
     - restart httpd
