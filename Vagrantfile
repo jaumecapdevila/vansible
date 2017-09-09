@@ -13,7 +13,7 @@ Vagrant.configure(2) do |config|
   config.vm.network "private_network", ip: "192.168.33.2"
 
   config.vm.synced_folder "./projects", "/var/www", owner:"vagrant", group:"apache", mount_options:["dmode=775,fmode=644"], create: true
-
+ 
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
     vb.name = "devBox"
@@ -23,6 +23,6 @@ Vagrant.configure(2) do |config|
 
  config.vm.provision "ansible" do |ansible|
     ansible.playbook = "provision/vagrant.yml"
-     ansible.sudo = true
+    ansible.become = true
   end
 end

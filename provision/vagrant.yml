@@ -2,10 +2,11 @@
 
 - hosts: all
   roles:
-    - setup
-    - httpd
-    - php
-    - mysql
-    - mongodb
-    - memcached
+    - role: setup
+    - role: httpd
+    - role: php
+    - role: mysql
+      become: yes
+    - role: mongodb
+    - role: memcached
 ...

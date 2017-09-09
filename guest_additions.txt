@@ -1,10 +1,9 @@
 vagrant ssh
-~$ sudo yum -y update
-~$ cd /opt
-~$ sudo wget -c http://download.virtualbox.org/virtualbox/4.2.8/VBoxGuestAdditions_4.2.8.iso \
-                       -O VBoxGuestAdditions_4.2.8.iso
-~$ sudo mount VBoxGuestAdditions_4.2.8.iso -o loop /mnt
-~$ cd /mnt
-~$ sudo sh VBoxLinuxAdditions.run --nox11
-~$ cd /opt
-~$ sudo rm *.iso
+sudo yum -y update
+cd /opt
+sudo wget -c http://download.virtualbox.org/virtualbox/4.2.8/VBoxGuestAdditions_4.2.8.iso                 -O VBoxGuestAdditions_4.2.8.iso
+sudo mount VBoxGuestAdditions_4.2.8.iso -o loop /mnt
+cd /mnt
+sudo sh VBoxLinuxAdditions.run --nox11
+cd /opt
+sudo rm *.iso

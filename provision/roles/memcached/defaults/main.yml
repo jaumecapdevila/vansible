@@ -1,7 +1,9 @@
 ---
+memcached_port: 11211
+memcached_listen_ip: 127.0.0.1
 
-port: 11211
-max_conn: 1024
-cache_size: 64
-fs_file_max: 756024
+memcached_memory_limit: 64
+memcached_connections: 1024
 
+memcached_log_file: /var/log/memcached.log
+memcached_log_verbosity: ""
